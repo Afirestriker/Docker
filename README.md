@@ -8,7 +8,7 @@ Third, create a Dockerfile make sure 'D' is capital:
 
 Fourth, setup the Dockerfile and verify it.
 
-Fifth, add .dockerignore file in case you need to exclude somme files or folders.
+Fifth, add .dockerignore file in case you need to exclude some files or folders.
 
 Sixth, Run the docker build command
 
@@ -25,10 +25,17 @@ Breaking down the command:
  - The `:dev` is an optional label used to categories the build. Here :dev represent the image is for development environment.
  - The `.` lets Docker know where it can find the `Dockerfile`.
 
-Seventh, Run your container
-
 Once the build is complete, an image will appear in the Images tab of the Docker desktop application.
 
+Seventh, Run your image
+
+```bash
+# build syntax
+docker run -p $machineHostPort:$dockerInternalPort $imageName:$label
+
+# actual build
+docker run -p 1500:3000 welcome-to-docker:dev
+```
 Select the image name to see its details. Select Run to run it as a container. In the Optional settings remember to specify a port number (something like 8089).
 
 Eight, View the frontend
