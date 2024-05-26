@@ -1,4 +1,4 @@
-## Getting Started wiht Docker
+## Getting Started with Docker
 
 First, redirect to your sample application.
 
