@@ -30,10 +30,10 @@ Once the build is complete, an image will appear in the Images tab of the Docker
 Seventh, Run your image
 
 ```bash
-# build syntax
+# syntax
 docker run -p $machineHostPort:$dockerInternalPort $imageName:$label
 
-# actual build
+# example
 docker run -p 1500:3000 welcome-to-docker:dev
 ```
 Select the image name to see its details. Select Run to run it as a container. In the Optional settings remember to specify a port number (something like 8089).
@@ -41,6 +41,21 @@ Select the image name to see its details. Select Run to run it as a container. I
 Eight, View the frontend
 
 You now have a running container. If you don't have a name for your container, Docker provides one. View your container live by selecting the link below the container's name.
+
+## Docker Hub
+
+create account in docker hub
+ 
+In terminal, execute below command 
+
+```bash
+# syntax
+docker tag local-image-name:tagname dockerHub-username/repo-name:tagname
+
+# example
+docker tag next-proj-docker:Devops komalagra/next-project:Devops
+```
+Verify image in the docker hub
 
 ## Learn More
 
